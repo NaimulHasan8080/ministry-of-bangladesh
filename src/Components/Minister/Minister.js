@@ -1,7 +1,6 @@
 import React from 'react';
 import './Minister.css'
 const Minister = (props) => {
-    console.log(props.minister)
     //distructuring from props.minister
     const { name, area, salary, img, ministry, religion } = props.minister || {};
     return (

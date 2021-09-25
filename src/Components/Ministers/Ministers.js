@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Minister from '../Minister/Minister';
 import './Ministers.css'
 const Ministers = () => {
@@ -8,26 +9,29 @@ const Ministers = () => {
             .then(res => res.json())
             .then(data => setMinisters(data))
     }, [])
-    const addToCart = minister => {
-        console.log(minister)
-    }
-    return (
-        <div className="container p-5">
-            <div className="ministers-container">
-                <div className="minister">
-                    {
-                        ministers.map(minister => <Minister
-                            key={minister.name}
-                            addToCart={addToCart}
-                            minister={minister}>
-                        </Minister>)
-                    }
-                </div>
-                <div>
-                    <h2>Cart summary</h2>
-                </div>
+    //declare a new cart
+    const [cart, setCart] = useState([]);
 
+    const addToCart = minister => {
+        const newCart = [...cart, minister];
+        setCart(newCart)
+    }
+
+    return (
+        <div className="ministers-container p-5">
+            <div className="minister">
+                {
+                    ministers.map(minister => <Minister
+                        key={minister.name}
+                        addToCart={addToCart}
+                        minister={minister}>
+                    </Minister>)
+                }
             </div>
+            <div>
+                <Cart cart={cart}></Cart>
+            </div>
+
         </div>
     );
 };
