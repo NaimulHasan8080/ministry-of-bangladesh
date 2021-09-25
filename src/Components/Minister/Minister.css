@@ -1,0 +1,19 @@
+.minister-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.minister-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: peru;
+    border-radius: 10px;
+}
+.btn-regular{
+    background-color: rgb(221, 189, 5);
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    margin-bottom: 5px;
+   font-weight: 600;
+}

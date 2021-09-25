@@ -1,0 +1,9 @@
+.ministers-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.minister{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
