@@ -6,9 +6,10 @@
 .minister-container{
     display: grid;
     grid-template-columns: 1fr;
-    background-image: linear-gradient(#ffff66,#99ff99);
+    /* background-image: linear-gradient(#ffff66,#99ff99); */
+    background-color: #181407;
     border-radius: 10px;
-    color: red;
+    color: rgba(144, 238, 144, 0.637);
 }
 .btn-regular{
     background-color: rgb(221, 189, 5);

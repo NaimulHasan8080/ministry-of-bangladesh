@@ -1,6 +1,7 @@
 .header{
-    background-image: linear-gradient(#ff9933,#ff3300);
-    color: white;
+    /* background-image: linear-gradient(#ff9933,#ff3300); */
+    background-color: #58ACFA;
+    color: rgba(255, 255, 255, 0.986);
     padding: 5px;
     border-radius: 5px;
     margin: 5px;
