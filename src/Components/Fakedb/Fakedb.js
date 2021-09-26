@@ -1,3 +1,4 @@
+//create array of object here
 const minister = [
     {
         name: "Sheikh Hasina Wajed",

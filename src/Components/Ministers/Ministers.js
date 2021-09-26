@@ -11,7 +11,7 @@ const Ministers = () => {
     }, [])
     //declare a new cart
     const [cart, setCart] = useState([]);
-
+    //declare a array function for the button
     const addToCart = minister => {
         const newCart = [...cart, minister];
         setCart(newCart)
@@ -28,8 +28,15 @@ const Ministers = () => {
                     </Minister>)
                 }
             </div>
-            <div>
+            <div className="cart-container">
                 <Cart cart={cart}></Cart>
+                {
+                    cart.map(person => <div>
+                        <li>{person.name}</li>
+                        <img src={person.img} />
+
+                    </div>)
+                }
             </div>
 
         </div>
